@@ -1,0 +1,18 @@
+version: 4.0.69
+steps:
+  - prompt: Click on "Pricing" in the header.
+    commands:
+      - command: hover-text
+        text: Pricing
+        description: link in the header
+        action: click
+  - prompt: Assert that the pricing details page is displayed.
+    commands:
+      - command: assert
+        expect: the pricing details page is displayed
+  - prompt: >-
+      Check that different pricing tiers or plans are visible.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: different pricing tiers or plans are visible
