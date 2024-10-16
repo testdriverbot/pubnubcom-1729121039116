@@ -1,0 +1,14 @@
+version: 4.0.69
+steps:
+  - prompt: Click on the "Privacy Policy" link in the cookie consent banner.
+    commands:
+      - command: hover-text
+        text: Privacy Policy
+        description: link in the cookie consent banner
+        action: click
+  - prompt: >-
+      Assert that the privacy policy page is displayed.  # Use the content of
+      the file from the environment
+    commands:
+      - command: assert
+        expect: the privacy policy page is displayed
